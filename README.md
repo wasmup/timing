@@ -1,66 +1,66 @@
-# Hello World compile time in C C++ C# Go Java JavaScript Kotlin Python Rust
+# Hello World build/compile time in C C++ C# Go Java JavaScript Kotlin Python Rust
 ```sh
 bash
-cd py
-cd ../py
-python --version
-# Python 3.8.4
-time python main.py
-# real    0m0.128s
-# user    0m0.000s
-# sys     0m0.015s
-
-cd ../js
-node --version
-# v12.18.3
-time node index.js
-# real    0m0.173s
-# user    0m0.000s
-# sys     0m0.031s
-
+cd golang
 cd ../golang
 go version
-# go version go1.15
+# go version go1.15  go1.16
 time go run .
-# real    0m0.701s
+# real    0m0.701s  0m0.472s
 # user    0m0.015s
 # sys     0m0.015s
 time go build
-# real    0m0.759s
+# real    0m0.759s  0m0.333s
 # user    0m0.015s
 # sys     0m0.031s
 time ./golang
-# real    0m0.071s
+# real    0m0.071s  0m0.031s
 # user    0m0.000s
 # sys     0m0.046s
+
+cd ../py
+python --version
+# Python 3.8.4       3.9.1
+time python main.py
+# real    0m0.128s  0m0.103s
+# user    0m0.000s  0m0.015s
+# sys     0m0.015s  0m0.047s
+
+cd ../js
+node --version
+# v12.18.3          v14.15.5
+time node index.js
+# real    0m0.173s  0m0.154s
+# user    0m0.000s
+# sys     0m0.031s  0m0.047s
 
 
 cd ../c
 time gcc main.c
-# real    0m0.545s
+# real    0m0.545s  0m0.277s
 # user    0m0.046s
 # sys     0m0.000s
 time ./a
-# real    0m0.051s
+# real    0m0.051s 0m0.041s
 # user    0m0.000s
 # sys     0m0.031s
 
 
 cd ../cpp
 time g++ main.cpp
-# real    0m1.165s
+# real    0m1.165s 0m0.945s
 # user    0m0.000s
 # sys     0m0.047s
 time ./a
-# real    0m0.058s
+# real    0m0.058s 0m0.154s
 # user    0m0.015s
 # sys     0m0.000s
 
 cd ../rs
 cargo version
-# cargo 1.45.0
+# cargo 1.45.0   1.50.0
 rustc --version
-# rustc 1.45.0
+# rustc 1.45.0   1.50.0
 cargo clean
 time cargo run --release
 # real    0m1.006s
@@ -78,31 +78,31 @@ time target/release/rs
 cd ../cs
 dotnet --list-sdks
 dotnet --version
-# 3.1.301
+# 3.1.301           5.0.103 
 time dotnet new console
-# real    0m3.160s
+# real    0m3.160s  0m2.619s
 # user    0m0.015s
 # sys     0m0.015s
 dotnet clean
 time dotnet run
-# real    0m3.075s
+# real    0m3.075s  0m4.075s
 # user    0m0.000s
 # sys     0m0.031s
 
 cd ../Java
 which java
 java -version
-# java version "14.0.2"
+# java version 14.0.2 15.0.2
 time java Java.java
-# real    0m1.103s
+# real    0m1.103s   0m0.856s
 # user    0m0.000s
 # sys     0m0.046s
 time javac Java.java
-# real    0m1.104s
+# real    0m1.104s  0m0.874s
 # user    0m0.000s
 # sys     0m0.047s
 time java Java
-# real    0m0.171s
+# real    0m0.171s 0m0.229s
 # user    0m0.015s
 # sys     0m0.031s
 
