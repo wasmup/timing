@@ -28,83 +28,75 @@ time python3 main.py
 
 cd ../js
 node --version
-# v12.18.3          v14.15.5
+# v19.4.0
 time node index.js
-# real    0m0.173s  0m0.154s
-# user    0m0.000s
-# sys     0m0.031s  0m0.047s
-
+# real    0m0.049s
+# user    0m0.032s
+# sys     0m0.016s
 
 cd ../c
+gcc --version
+# 11.3.0
 time gcc main.c
-# real    0m0.545s  0m0.277s
-# user    0m0.046s
+# real    0m0.045s
+# user    0m0.015s
+# sys     0m0.029s
+time ./a.out
+# real    0m0.001s
+# user    0m0.001s
 # sys     0m0.000s
-time ./a
-# real    0m0.051s 0m0.041s
-# user    0m0.000s
-# sys     0m0.031s
 
 
 cd ../cpp
+g++ --version
+# 11.3.0
 time g++ main.cpp
-# real    0m1.165s 0m0.945s
+# real    0m0.535s
+# user    0m0.322s
+# sys     0m0.072s
+time ./a.out
+# real    0m0.002s
 # user    0m0.000s
-# sys     0m0.047s
-time ./a
-# real    0m0.058s 0m0.154s
-# user    0m0.015s
-# sys     0m0.000s
+# sys     0m0.002s
 
 cd ../rs
 cargo version
-# cargo 1.45.0   1.50.0
+# cargo 1.66.1 
 rustc --version
-# rustc 1.45.0   1.50.0
+# rustc 1.66.1
 cargo clean
 time cargo run --release
-# real    0m1.006s
-# user    0m0.000s
-# sys     0m0.031s
+# release [optimized] target(s) in 0.63s
+# real    0m0.702s
+# user    0m0.246s
+# sys     0m0.114s
+cargo clean
 time cargo build --release
-# real    0m1.000s
-# user    0m0.015s
-# sys     0m0.015s
-time target/release/rs
-# real    0m0.057s
-# user    0m0.000s
-# sys     0m0.031s
-
-cd ../cs
-dotnet --list-sdks
-dotnet --version
-# 3.1.301           5.0.103 
-time dotnet new console
-# real    0m3.160s  0m2.619s
-# user    0m0.015s
-# sys     0m0.015s
-dotnet clean
-time dotnet run
-# real    0m3.075s  0m4.075s
-# user    0m0.000s
-# sys     0m0.031s
+# Finished release [optimized] target(s) in 0.43s
+# real    0m0.502s
+# user    0m0.399s
+# sys     0m0.145s
+time ${target}/release/rs
+# real    0m0.007s
+# user    0m0.005s
+# sys     0m0.003s
 
 cd ../Java
 which java
 java -version
-# java version 14.0.2 15.0.2
+# openjdk version "17.0.4" 2022-07-19
 time java Java.java
-# real    0m1.103s   0m0.856s
-# user    0m0.000s
-# sys     0m0.046s
+# real    0m0.588s
+# user    0m1.120s
+# sys     0m0.057s
 time javac Java.java
-# real    0m1.104s  0m0.874s
-# user    0m0.000s
-# sys     0m0.047s
+# real    0m0.614s
+# user    0m1.209s
+# sys     0m0.073s
 time java Java
-# real    0m0.171s 0m0.229s
-# user    0m0.015s
-# sys     0m0.031s
+# real    0m0.056s
+# user    0m0.026s
+# sys     0m0.010s
 
 cd ../kt
 which kotlinc
@@ -132,4 +124,21 @@ time java -jar hello.jar
 # real    0m0.200s
 # user    0m0.015s
 # sys     0m0.047s
+
+cd ../cs
+dotnet --list-sdks
+# 7.0.102
+dotnet --version
+# 7.0.102
+time dotnet new console
+# real    0m1.886s
+# user    0m1.812s
+# sys     0m0.206s
+
+# dotnet clean
+time dotnet run
+# real    0m4.458s
+# user    0m3.790s
+# sys     0m0.311s
+
 ```

@@ -2,3 +2,5 @@
 **/obj/
 **/*.exe
 **/*.class
+c/a.out
+cpp/a.out
