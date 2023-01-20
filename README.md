@@ -172,3 +172,22 @@ time dotnet run
 # user    0m3.790s
 # sys     0m0.311s
 ```
+
+---
+
+```sh
+dart --version
+# Dart SDK version: 2.18.6 (stable) 
+
+time dart create dart
+# real    0m4.516s
+# user    0m2.500s
+# sys     0m0.501s
+
+cd ../dart
+time  dart run
+# real    0m1.213s
+# user    0m1.178s
+# sys     0m0.290s
+
+```
