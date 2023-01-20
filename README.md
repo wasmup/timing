@@ -101,29 +101,29 @@ time java Java
 cd ../kt
 which kotlinc
 kotlinc -version 
-# kotlinc-jvm 1.3.72 (JRE 14.0.2+12-46)
+# kotlinc-jvm 1.7.21 (JRE 11.0.13+0-b1751.21-8125866)
 
 time kotlinc-jvm hello.kt
-# real    0m5.070s
-# user    0m0.197s
-# sys     0m0.448s
+# real    0m5.301s
+# user    0m11.734s
+# sys     0m0.602s
 
 # run:
 time kotlin HelloKt
-# real    0m0.837s
-# user    0m0.182s
-# sys     0m0.510s
+# real    0m0.421s
+# user    0m0.397s
+# sys     0m0.056s
 
 time kotlinc-jvm hello.kt -include-runtime -d hello.jar
-# real    0m5.780s
-# user    0m0.091s
-# sys     0m0.527s
+# real    0m6.530s
+# user    0m12.283s
+# sys     0m1.270s
 
 # run:
 time java -jar hello.jar
-# real    0m0.200s
-# user    0m0.015s
-# sys     0m0.047s
+# real    0m0.085s
+# user    0m0.049s
+# sys     0m0.018s
 
 cd ../cs
 dotnet --list-sdks

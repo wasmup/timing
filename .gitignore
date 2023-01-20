@@ -4,3 +4,5 @@
 **/*.class
 c/a.out
 cpp/a.out
+kt/hello.jar
+kt/META-INF/main.kotlin_module
