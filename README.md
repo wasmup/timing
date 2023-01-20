@@ -17,7 +17,11 @@ time ./hello
 # real    0m0.002s
 # user    0m0.002s
 # sys     0m0.000s
+```
 
+---
+
+```sh
 cd ../py
 python3 --version
 # Python 3.10.6
@@ -25,7 +29,11 @@ time python3 main.py
 # real    0m0.016s
 # user    0m0.008s
 # sys     0m0.008s
+```
 
+---
+
+```sh
 cd ../js
 node --version
 # v19.4.0
@@ -33,7 +41,11 @@ time node index.js
 # real    0m0.049s
 # user    0m0.032s
 # sys     0m0.016s
+```
 
+---
+
+```sh
 cd ../c
 gcc --version
 # 11.3.0
@@ -45,8 +57,11 @@ time ./a.out
 # real    0m0.001s
 # user    0m0.001s
 # sys     0m0.000s
+```
 
+---
 
+```sh
 cd ../cpp
 g++ --version
 # 11.3.0
@@ -58,7 +73,11 @@ time ./a.out
 # real    0m0.002s
 # user    0m0.000s
 # sys     0m0.002s
+```
 
+---
+
+```sh
 cd ../rs
 cargo version
 # cargo 1.66.1 
@@ -80,7 +99,11 @@ time ${target}/release/rs
 # real    0m0.007s
 # user    0m0.005s
 # sys     0m0.003s
+```
 
+---
+
+```sh
 cd ../Java
 which java
 java -version
@@ -97,7 +120,11 @@ time java Java
 # real    0m0.056s
 # user    0m0.026s
 # sys     0m0.010s
+```
 
+---
+
+```sh
 cd ../kt
 which kotlinc
 kotlinc -version 
@@ -124,7 +151,11 @@ time java -jar hello.jar
 # real    0m0.085s
 # user    0m0.049s
 # sys     0m0.018s
+```
 
+---
+
+```sh
 cd ../cs
 dotnet --list-sdks
 # 7.0.102
@@ -140,5 +171,4 @@ time dotnet run
 # real    0m4.458s
 # user    0m3.790s
 # sys     0m0.311s
-
 ```
