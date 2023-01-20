@@ -2,29 +2,29 @@
 ```sh
 bash
 cd golang
-cd ../golang
 go version
-# go version go1.15  go1.16
+# go version go1.19.5 linux/amd64
+go clean
 time go run .
-# real    0m0.701s  0m0.472s
-# user    0m0.015s
-# sys     0m0.015s
+# real    0m0.116s
+# user    0m0.121s
+# sys     0m0.051s
 time go build
-# real    0m0.759s  0m0.333s
-# user    0m0.015s
-# sys     0m0.031s
-time ./golang
-# real    0m0.071s  0m0.031s
-# user    0m0.000s
-# sys     0m0.046s
+# real    0m0.189s
+# user    0m0.216s
+# sys     0m0.065s
+time ./hello
+# real    0m0.002s
+# user    0m0.002s
+# sys     0m0.000s
 
 cd ../py
-python --version
-# Python 3.8.4       3.9.1
-time python main.py
-# real    0m0.128s  0m0.103s
-# user    0m0.000s  0m0.015s
-# sys     0m0.015s  0m0.047s
+python3 --version
+# Python 3.10.6
+time python3 main.py
+# real    0m0.016s
+# user    0m0.008s
+# sys     0m0.008s
 
 cd ../js
 node --version
