@@ -3,16 +3,18 @@
 bash
 cd golang
 go version
-# go version go1.19.5 linux/amd64
+# go version go1.20 linux/amd64
 go clean
 time go run .
 # real    0m0.116s
 # user    0m0.121s
 # sys     0m0.051s
-time go build
-# real    0m0.189s
-# user    0m0.216s
+time go build -ldflags "-s -w"
+# real    0m0.141s
+# user    0m0.139s
 # sys     0m0.065s
+ls -lh ./hello
+# 1.2M 
 time ./hello
 # real    0m0.002s
 # user    0m0.002s
@@ -168,9 +170,9 @@ time dotnet new console
 
 # dotnet clean
 time dotnet run
-# real    0m4.458s
-# user    0m3.790s
-# sys     0m0.311s
+# real    0m2.235s
+# user    0m2.004s
+# sys     0m0.279s
 ```
 
 ---
